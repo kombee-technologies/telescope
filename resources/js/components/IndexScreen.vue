@@ -350,7 +350,7 @@ export default {
           type="text"
           class="form-control w-100"
           id="searchInput"
-          placeholder="Search Tag1"
+          placeholder="Search Tag"
           v-model="tag"
           @input.stop="search"
         />

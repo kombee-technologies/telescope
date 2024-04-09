@@ -4,6 +4,7 @@ namespace Laravel\Telescope\Storage;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 use Laravel\Telescope\Database\Factories\EntryModelFactory;
 
 class EntryModel extends Model
@@ -92,6 +93,7 @@ class EntryModel extends Model
      */
     protected function whereSearch($query, EntryQueryOptions $options)
     {
+        Log::info("Search string: " . $options->searchData);
         $query->where('content', 'like', '%' . $options->searchData . '%');
 
         return $this;
