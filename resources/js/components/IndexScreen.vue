@@ -17,6 +17,7 @@ export default {
       toDate: "",
       format: "YYYY-MM-dd HH:i:s",
       tag: "",
+      searchData: "",
       familyHash: "",
       entries: [],
       ready: false,
@@ -328,8 +329,6 @@ export default {
   <div class="card overflow-hidden">
     <h5 class="px-3 pt-3">{{ this.title }}</h5>
     <div class="card-header d-flex align-items-center justify-content-between">
-      <h2 class="h6 m-0">{{ this.title }}</h2>
-
       <div
         class="form-control-with-icon w-25"
         v-if="!hideSearch && (tag || entries.length > 0)"
