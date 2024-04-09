@@ -1983,30 +1983,14 @@ var render = function render() {
     staticClass: "px-3 pt-3"
   }, [_vm._v(_vm._s(this.title))]), _vm._v(" "), _c("div", {
     staticClass: "card-header d-flex align-items-center justify-content-between"
-  }, [!_vm.hideSearch && (_vm.tag || _vm.entries.length > 0) ? _c("div", {
-    staticClass: "form-control-with-icon w-25"
-  }, [_c("div", {
-    staticClass: "icon-wrapper"
-  }, [_c("svg", {
-    staticClass: "icon",
-    attrs: {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 20 20"
-    }
-  }, [_c("path", {
-    attrs: {
-      "fill-rule": "evenodd",
-      d: "M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z",
-      "clip-rule": "evenodd"
-    }
-  })])]), _vm._v(" "), _c("input", {
+  }, [!_vm.hideSearch && (_vm.tag || _vm.entries.length > 0) ? _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.tag,
       expression: "tag"
     }],
-    staticClass: "form-control w-100",
+    staticClass: "form-control w-25",
     attrs: {
       type: "text",
       id: "searchInput",
@@ -2024,7 +2008,7 @@ var render = function render() {
         return _vm.search.apply(null, arguments);
       }]
     }
-  }), _vm._v(" "), !_vm.hideSearch ? _c("input", {
+  }) : _vm._e(), _vm._v(" "), !_vm.hideSearch ? _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -2079,7 +2063,7 @@ var render = function render() {
       },
       expression: "toDate"
     }
-  }) : _vm._e()], 1) : _vm._e()]), _vm._v(" "), _vm.recordingStatus !== "enabled" ? _c("p", {
+  }) : _vm._e()], 1), _vm._v(" "), _vm.recordingStatus !== "enabled" ? _c("p", {
     staticClass: "mt-0 mb-0 disabled-watcher d-flex align-items-center"
   }, [_c("svg", {
     staticClass: "mr-2",
