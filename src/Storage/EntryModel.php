@@ -93,7 +93,6 @@ class EntryModel extends Model
      */
     protected function whereSearch($query, EntryQueryOptions $options)
     {
-        Log::info("Search string: " . $options->searchData);
         $query->where('content', 'like', '%' . $options->searchData . '%');
 
         return $this;
